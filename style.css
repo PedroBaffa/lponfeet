@@ -1,0 +1,186 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+:root {
+  /* Paleta de Cores baseada na imagem */
+  --fundo: #050505; /* Preto quase absoluto */
+  --texto: #ffffff; /* Branco */
+  --dourado: #ffd700; /* Ouro do contorno */
+  --azul: #00bfff; /* Azul do 'L' */
+  --vermelho: #ff4500; /* Vermelho do 'P' */
+  --cinza-escuro: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: "Montserrat", sans-serif; /* Fonte "Formal mas não tanto" */
+}
+
+/* --- TIPOGRAFIA --- */
+h1,
+h2,
+.logo {
+  font-family: "Permanent Marker", cursive; /* Fonte "Piche" */
+  letter-spacing: 2px;
+}
+
+/* --- CABEÇALHO --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom: 2px solid var(--dourado); /* Linha dourada luxuosa */
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--dourado);
+  text-shadow: 2px 2px 0px var(--azul); /* Efeito 3D simples */
+}
+
+nav a {
+  color: var(--texto);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--azul);
+}
+
+.btn-destaque {
+  border: 1px solid var(--dourado);
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Definição do fundo */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("assets/fundo-hero.png");
+
+  background-size: cover; /* Garante que a imagem cobre todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Não repete a imagem */
+  /* background-attachment: fixed; -> REMOVIDO para evitar a borda/blur */
+
+  color: var(--texto);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.destaque-cor {
+  color: var(--azul);
+}
+
+.btn-principal {
+  background-color: var(--dourado);
+  color: var(--fundo);
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-family: "Permanent Marker", cursive;
+  transform: skew(-10deg); /* Inclina o botão para dar estilo street */
+  margin-top: 20px;
+}
+
+.btn-principal:hover {
+  background-color: var(--vermelho);
+  color: white;
+}
+
+/* --- PRODUTOS --- */
+.produtos {
+  padding: 50px;
+  text-align: center;
+}
+
+.titulo-secao {
+  font-size: 3rem;
+  color: var(--texto);
+  text-shadow: 2px 2px 0px var(--vermelho);
+  margin-bottom: 40px;
+}
+
+.grid-produtos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--cinza-escuro);
+  border: 1px solid #333;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Sobe um pouco ao passar o mouse */
+  border-color: var(--dourado);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); /* Brilho dourado */
+}
+
+.img-placeholder {
+  background-color: #000;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.card h3 {
+  margin: 10px 0;
+}
+
+.preco {
+  color: var(--dourado);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card button {
+  background-color: transparent;
+  border: 1px solid var(--texto);
+  color: var(--texto);
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.card button:hover {
+  background-color: var(--texto);
+  color: var(--fundo);
+}
+
+/* --- RODAPÉ --- */
+footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 0.9rem;
+}
