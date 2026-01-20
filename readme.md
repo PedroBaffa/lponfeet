@@ -34,7 +34,7 @@ Para rodar este projeto localmente, precisas de ter instalado um servidor local 
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/PedroBaffa/lponfeet.git](https://github.com/PedroBaffa/lponfeet.git)
+    git clone https://github.com/PedroBaffa/lponfeet.git
     ```
 
 2.  **Mova os arquivos:**
